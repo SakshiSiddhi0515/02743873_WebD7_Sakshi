@@ -1,0 +1,132 @@
+@import 'config';
+@import 'utilities';
+@import 'buttons';
+@import 'mobile';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $light-color;
+    font-family: $font-stack;
+    line-height: 1.2;
+}
+
+.img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.showcase {
+    @include set-background($primary-color);
+    height: 200%;
+    background-repeat: repeat; 
+
+    nav {
+        display: flexbox;
+        align-items: center;
+        justify-content:  space-between;
+
+        img {
+            width: 10%;
+        }
+
+        ul {
+            display: flex;
+            list-style-type: none;
+        }
+    
+        li {
+            padding: 15px;
+        }
+    
+        a {
+            color: set-text-color($primary-color);
+        }
+    
+        a:hover {
+            color: $secondary-color;
+        }
+    } 
+
+    &-content {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 50%;
+        }
+
+        h1 {
+            font-size: 50px;
+            line-height: 1.2;
+        }
+    }
+
+    &-booking {
+        height: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: space-evenly;
+        align-items: center;
+
+        img {
+            width:20%;
+            padding: 40px;
+        }
+
+        show-booking{
+            width:25%;
+        }
+    }
+}
+// Define variables for colors and font family
+$bg-color: #1d1d1d;
+$text-color: #ffffff;
+$font-family: Arial, sans-serif;
+
+// Define the footer styles
+.music-footer {
+  background-color: $bg-color;
+  color: $text-color;
+  font-family: $font-family;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+
+  // Add a hover effect on the links
+  a {
+    color: lighten($text-color, 30%);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: lighten($text-color, 60%);
+    }
+  }
+
+  // Add a gradient background to the button
+  .enroll-btn {
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+    color: $text-color;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      background: linear-gradient(to right, #ff416c, #ff4b2b);
+    }
+  }
+}
