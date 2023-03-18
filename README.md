@@ -16,13 +16,15 @@ Sass/Scss Used:
 
 6) Extend: Here we extended @extend btn which shared a set of CSS properties from one selector to another.
 
-7) Selector :
+7) Selector :The parent selector, &, is a special selector invented by Sass that’s used in nested selectors to refer to the outer selector. It makes it possible to re-use the outer selector in more complex ways, like adding a pseudo-class or adding a selector before the parent.
 
-8) Interpolation: 
+8) Interpolation: Interpolation can be used almost anywhere in a Sass stylesheet to embed the result of a SassScript expression into a chunk of CSS
 
 References: W3schools.com
 	    developer.mozilla.com
-      -- Variables in CSS
+
+
+-- Variables in CSS
 Prefixed with $
 $primary-color: blue
 
